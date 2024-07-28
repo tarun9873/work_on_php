@@ -10,15 +10,22 @@ if(mysqli_num_rows($result) > 0 ){
   $outpot = '<table class="responsive-table">
             <thead>
             <tr>
-              <th scope="col">Fisrt Name</th>
-              <th scope="col">Last Name</th>
+            <th scope="col">S.No</th>
+              <th scope="col">Full Name</th>
               <th scope="col">Phone Number</th>
               <th scope="col">Email</th>
               <th scope="col">Massage</th>
+               <th scope="col">action</th>
             </tr>
           </thead>';
            while($row = mysqli_fetch_assoc($result)){
-            $outpot .=" <tr><td>{$row["FirstName"]}</td><td>{$row["LastName"]}</td><td>{$row["Phone"]}</td><td>{$row["mail"]}</td><td>{$row["Massage"]}</td></tr>";
+            $outpot .=" <tr><td data-label=Name>{$row["S.No"]}</td><td data-label=Name>{$row["Fullname"]}</td><td data-label=Phone_Number>{$row["Phone"]}</td><td data-label=Email>{$row["mail"]}</td><td data-label=Massage>{$row["Massage"]}</td>
+             <td >
+                       <a href='edit_crud?id={$row["S.No"]}'> <input type='button' class='butt_edit' value='Edit'></a>
+                          <input type='button' class='butt_delet' value='Delete'>
+                  
+                      
+                  </td></tr>";
            }
 $outpot .= "</table>";
 

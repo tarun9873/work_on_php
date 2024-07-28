@@ -1,47 +1,45 @@
-
 <?php 
-
-
-header("Cache-Control: no-cache, must-revalidate"); // HTTP 1.1
-header("Pragma: no-cache"); // HTTP 1.0
-header("Expires: 0"); // Proxies
-
+// Enable error reporting for debugging purposes
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 if(isset($_POST['submit']))
 {
-$fistname = $_POST["fname"];
-$lastname = $_POST["lname"];
-$mobile = $_POST["mobile"];
-$email = $_POST["email"];
-$msg = $_POST["msg"]; 
+    $Fullname = $_POST["fname"];
+    $mobile = $_POST["mobile"];
+    $email = $_POST["email"];
+    $msg = $_POST["msg"];  
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tarun";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tarun";
 
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-$sql="INSERT INTO contact (FirstName, LastName,Phone,mail,Massage)values('$fistname','$lastname','$mobile','$email','$msg')";
+    // Debugging: print submitted data
+    echo "FirstName: $Fullname,  Phone: $mobile, Email: $email, Message: $msg <br>";
 
-$result=mysqli_query($conn,$sql);
-if($result){
+    $sql = "INSERT INTO contact (Fullname,  Phone, mail, Massage) 
+            VALUES ('$Fullname',  '$mobile', '$email', '$msg')";
 
-     header("Location: contact");
-     exit();
-   
+    // Debugging: print SQL query
+    echo "SQL Query: $sql <br>";
+
+    if (mysqli_query($conn, $sql)) {
+        header("Location: contact?=?successFull");
+        exit();
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
 }
-else{
-  echo"Failed";
-}
-
-$sql->close();
-
-}
-
-// $sql->close();
-// $conn->close();
-
 ?>
-

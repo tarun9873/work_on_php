@@ -14,7 +14,7 @@
                                 </svg>
                             </h2>
                             <div class="footer__widget--inner">
-                                <a class="footer__logo" href="index.html"><img class="footer__logo--img display-block" src="assets/img/logo/nav-logo-white.webp" alt="footer-logo"></a>
+                                <a class="footer__logo" href="index.html"><img class="footer__logo--img display-block" src="assets/img/logo/SquareTech_logo.png" alt="footer-logo"></a>
                                 <p class="footer__widget--desc">Nemo enim ipsam voluptate quia 
                                     voluptas sit aspernatur aut odit
                                     aut fugit, sed quia magni this
@@ -144,11 +144,8 @@
 
   <!-- Customscript js -->
   <script src="assets/js/script.js" defer="defer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
 
   
 </body>
-
-<!-- Mirrored from risingtheme.com/html/rokon-demo/rokon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Feb 2024 12:33:44 GMT -->
 </html>
