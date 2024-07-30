@@ -8,6 +8,7 @@ if(isset($_POST['submit']))
 {
     $Fullname = $_POST["fname"];
     $mobile = $_POST["mobile"];
+    $select = $_POST["selectjobs"];
     $email = $_POST["email"];
     $msg = $_POST["msg"];  
 
@@ -25,10 +26,10 @@ if(isset($_POST['submit']))
     }
 
     // Debugging: print submitted data
-    echo "FirstName: $Fullname,  Phone: $mobile, Email: $email, Message: $msg <br>";
+    // echo "FirstName: $Fullname,  Phone: $mobile, jobs: $select,: Email: $email, Message: $msg <br>";
 
-    $sql = "INSERT INTO contact (Fullname,  Phone, mail, Massage) 
-            VALUES ('$Fullname',  '$mobile', '$email', '$msg')";
+    $sql = "INSERT INTO contact  (Fullname, Phone, jobs,  mail, Massage) 
+            VALUES ('$Fullname',  '$mobile', '$select','$email', '$msg')";
 
     // Debugging: print SQL query
     echo "SQL Query: $sql <br>";

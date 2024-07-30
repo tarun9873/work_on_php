@@ -61,7 +61,7 @@
                     <div class="contact__form--list mb-20">
                       <label class="contact__form--label" for="input2">Option
                         <span class="contact__form--label__star">*</span></label>
-                        <select class="contact__form--input" name="select" required>
+                        <select class="contact__form--input" name="selectjobs" required>
                           <option value="" selected disabled>-- Select Size --</option>
                         <?php 
                         $contion=mysqli_connect("localhost","root","","tarun") or die("connetion failed");
@@ -69,7 +69,7 @@
                         $resullt=mysqli_query($contion, $sql)or die(" Sql connetion failed");
                         while($row = mysqli_fetch_assoc($resullt)){
                         ?>
-                          <option value="<?php echo $row['s.id']; ?>"><?php echo $row['cselect']; ?></option>
+                          <option value="<?php echo $row['sid']; ?>"><?php echo $row['cselect']; ?></option>
                           <?php } ?>
                         </select>
                     </div>

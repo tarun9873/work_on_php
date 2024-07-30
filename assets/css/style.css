@@ -13522,7 +13522,7 @@ table tr {
 
 table th,
 table td {
-  padding: .625em;
+  padding: 10px 0px 10px 0px;
   text-align: center;
   font-size: 14px;
 }

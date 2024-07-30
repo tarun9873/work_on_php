@@ -106,7 +106,7 @@
                         <div class="main__logo">
                             <h1 class="main__logo--title"><a
                                     class="main__logo--link"
-                                    href="index"><img
+                                    href=" "><img
                                         class="main__logo--img"
                                         src="assets/img/logo/SquareTech_logo.png"
                                         alt="logo-img"></a></h1>
@@ -116,7 +116,7 @@
                                 <ul class="d-flex">
                                     <li class="header__menu--items">
                                         <a class="header__menu--link"
-                                            href="index">Home </a>
+                                            href=" ">Home </a>
                                     </li>
                                     <li class="header__menu--items">
                                         <a class="header__menu--link"
@@ -216,7 +216,7 @@
                         <ul class="offcanvas__menu_ul">
                             <li class="offcanvas__menu_li">
                                 <a class="offcanvas__menu_item"
-                                    href="index">Home</a>
+                                    href="/">Home</a>
 
                             </li>
 
