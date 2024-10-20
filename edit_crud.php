@@ -37,20 +37,22 @@
           <div class="col-lg-12">
             <div class="contact__form">
             <?php 
-                            $conn = mysqli_connect("localhost", "root", "", "tarun") or die("Connection Failed");
-                            $jobs_id = $_GET['id'];
-                            $sql1 = "SELECT * FROM contact WHERE `S.No` = {$jobs_id}";
-                            $result = mysqli_query($conn, $sql1) or die("SQL Query Failed");
-                            if (mysqli_num_rows($result) > 0) {
-                                while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-              <form class="contact__form--inner" action="connect" method="post">
+                 $conn = mysqli_connect("localhost", "root", "", "tarun") or die("Connection Failed");
+                 $jobs_id = $_GET['id'];
+                $sql1 = "SELECT * FROM contact WHERE `S_No` = {$jobs_id}";
+                $result = mysqli_query($conn, $sql1) or die("SQL Query Failed");
+
+                 if (mysqli_num_rows($result) > 0) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+               ?>
+              <form class="contact__form--inner" action="update_data" method="post">
                 <div class="row">
                   <div class="col-lg-6 col-md-6">
                     <div class="contact__form--list mb-20">
                       <label class="contact__form--label" for="input1">Full Name
                         <span class="contact__form--label__star">*</span></label>
-                        <input type="hidden" name="S.No" value ="<?php echo $row['S.No']; ?>">
+                        <input type="hidden" name="S_NO" value="<?php echo htmlspecialchars($jobs_id); ?>">
+
                       <input class="contact__form--input" name="fname" value ="<?php echo $row['Fullname']; ?>" type="text"  />
                     </div>
                   </div>
@@ -66,10 +68,24 @@
                     <div class="contact__form--list mb-20">
                       <label class="contact__form--label" for="input2">Option
                         <span class="contact__form--label__star">*</span></label>
-                        <select class="contact__form--input" name="selectjobs" >
-                          <option value="" selected disabled>-- Select Size --</option>
-                     
-                        </select>
+                        <?php 
+                        $sqli_select= "SELECT * FROM sjobs";
+                        $result_2 = mysqli_query($conn, $sqli_select) or die("SQL Query Failed");
+                            if (mysqli_num_rows($result_2) > 0) {
+                              echo '<select class="contact__form--input" name="selectjobs" >';
+                              while ($row2 = mysqli_fetch_assoc($result_2)) {
+                                if($row['jobs']==$row2['sid']){
+                                  $select ="selected";
+
+                                }else{
+                                  $select="";
+
+                                }
+                                  echo "<option {$select} value='{$row2['sid']}'>{$row2['cselect']}</option>";
+                                }
+                        echo "</select>";
+                        }
+                        ?>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -88,8 +104,8 @@
                     </div>
                   </div>
                 </div>
-                <button class="contact__form--btn primary__btn" type="submit" id="submit" name="submit">
-                  Submit Now
+                <button class="contact__form--btn primary__btn" type="submit"  value="Update Data" name="submit">
+                  Update Data
                 </button>
               </form>
               
@@ -97,10 +113,8 @@
            
             <?php 
                }
-               } else {
-                 echo "<p>No data found for the provided ID.</p>";
-               }
-                        ?>
+              } 
+               ?>
           </div>
         </div>
       </div>

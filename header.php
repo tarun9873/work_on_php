@@ -4,9 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>tarun</title>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
         <meta name="description" content="Morden Bootstrap HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"> -->
@@ -23,14 +24,14 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </head>
 
     <body>
 
         <!-- Start preloader -->
-        <div id="preloader">
+        <!-- <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                 <div class="animation-preloader">
                     <div class="spinner"></div>
@@ -39,7 +40,7 @@
                 <div class="loader-section section-left"></div>
                 <div class="loader-section section-right"></div>
             </div>
-        </div>
+        </div> -->
         <!-- End preloader -->
 
         <!-- Start header area -->
@@ -61,7 +62,7 @@
                                         stroke="currentColor"
                                         stroke-miterlimit="10"
                                         stroke-width="32" /></svg>
-                                <a href="tel:+8543553004">+8543553004</a>
+                                <a href="tel:+8543553004">8527321599</a>
                             </li>
                             <li class="header__contact--info__list text-white">
                                 <svg class="header__contact--info__icon"
@@ -74,7 +75,7 @@
                                         fill="currentColor"></path>
                                 </svg>
                                 <a
-                                    href="mailto:demo@example.com">demo@example.com</a>
+                                    href="mailto:ak3400988@gmail.com">ak3400988@gmail.com</a>
                             </li>
                         </ul>
 
@@ -106,7 +107,7 @@
                         <div class="main__logo">
                             <h1 class="main__logo--title"><a
                                     class="main__logo--link"
-                                    href=" "><img
+                                    href="index"><img
                                         class="main__logo--img"
                                         src="assets/img/logo/SquareTech_logo.png"
                                         alt="logo-img"></a></h1>
@@ -116,16 +117,37 @@
                                 <ul class="d-flex">
                                     <li class="header__menu--items">
                                         <a class="header__menu--link"
-                                            href=" ">Home </a>
+                                            href="index">Home </a>
                                     </li>
-                                    <li class="header__menu--items">
-                                        <a class="header__menu--link"
-                                            href="contact">Contact </a>
+
+                                    <li class="header__menu--items style2">
+                                        <a class="header__menu--link style2"
+                                            href="javascript:viod(0)">About
+                                            <span
+                                                class="menu__plus--icon">+</span>
+                                        </a>
+                                        <ul class="header__sub--menu">
+                                            <li
+                                                class="header__sub--menu__items"><a
+                                                    href="portfolio"
+                                                    class="header__sub--menu__link">Portfolio</a></li>
+                                            <li
+                                                class="header__sub--menu__items"><a
+                                                    href="about"
+                                                    class="header__sub--menu__link">About
+                                                    Me</a></li>
+
+                                        </ul>
                                     </li>
+
                                     <li class="header__menu--items">
                                         <a class="header__menu--link"
                                             href="show-data">Crud
                                             operations </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link"
+                                            href="contact">Contact </a>
                                     </li>
                                 </ul>
                             </nav>
@@ -159,7 +181,7 @@
                                 </li>
                                 <li class="header__account--items">
                                     <a class="header__account--btn"
-                                        href="my-account">
+                                        href="myaccount.php">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             width="26.51" height="23.443"
                                             viewBox="0 0 512 512"><path
@@ -205,7 +227,7 @@
             <div class="offcanvas-header" tabindex="-1">
                 <div class="offcanvas__inner">
                     <div class="offcanvas__logo">
-                        <a class="offcanvas__logo_link" href="index.html">
+                        <a class="offcanvas__logo_link" href="index">
                             <img src="assets/img/logo/SquareTech_logo.png"
                                 alt="Rokon Logo">
                         </a>
@@ -216,17 +238,33 @@
                         <ul class="offcanvas__menu_ul">
                             <li class="offcanvas__menu_li">
                                 <a class="offcanvas__menu_item"
-                                    href="/">Home</a>
+                                    href="index">Home</a>
 
+                            </li>
+
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item"
+                                    href="#">About</a>
+                                <ul class="offcanvas__sub_menu">
+                                    <li class="offcanvas__sub_menu_li"><a
+                                            href="portfolio"
+                                            class="offcanvas__sub_menu_item">Portfolio</a></li>
+                                    <li class="offcanvas__sub_menu_li"><a
+                                            href="about"
+                                            class="offcanvas__sub_menu_item">About
+                                            Me</a></li>
+
+                                </ul>
                             </li>
 
                             <li class="offcanvas__menu_li"><a
                                     class="offcanvas__menu_item"
-                                    href="contact">Contact</a></li>
-                            <li class="offcanvas__menu_li"><a
-                                    class="offcanvas__menu_item"
                                     href="show-data">Crud
                                     operations</a></li>
+                            <li class="offcanvas__menu_li"><a
+                                    class="offcanvas__menu_item"
+                                    href="contact">Contact</a></li>
+
                         </ul>
                         <div class="offcanvas__account--items">
                             <a
@@ -285,7 +323,7 @@
                                         d="M416 32H32A32 32 0 0 0 0 64v384a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V64a32 32 0 0 0-32-32zm-16 48v152H248V80zm-200 0v152H48V80zM48 432V280h152v152zm200 0V280h152v152z"></path></svg>
                             </span>
                             <span
-                                class="offcanvas__stikcy--toolbar__label">Shop</span>
+                                class="offcanvas__stikcy--toolbar__label">Portfolio</span>
                         </a>
                     </li>
                     <li class="offcanvas__stikcy--toolbar__list ">
@@ -339,60 +377,121 @@
                                 </button>
                             </header>
                             <div class="main__contact--area">
-                                <div class="row align-items-center row-md-reverse">
-                                
-                                  <div class="col-lg-12">
-                                    <!-- <div>
+                                <div
+                                    class="row align-items-center row-md-reverse">
+
+                                    <div class="col-lg-12">
+                                        <!-- <div>
                                     </div> -->
-                                    <div class="contact__form">
-                                        <form class="contact__form--inner" action="connect" method="post">
-                                            <div class="row">
-                                              <div class="col-lg-6 col-md-6">
-                                                <div class="contact__form--list mb-20">
-                                                  <label class="contact__form--label" for="input1">First Name
-                                                    <span class="contact__form--label__star">*</span></label>
-                                                  <input class="contact__form--input" name="fname" id="fname" placeholder="Your First Name" type="text" required />
+                                        <div class="contact__form">
+                                            <form class="contact__form--inner"
+                                                action="connect" method="post">
+                                                <div class="row">
+                                                    <div
+                                                        class="col-lg-6 col-md-6">
+                                                        <div
+                                                            class="contact__form--list mb-20">
+                                                            <label
+                                                                class="contact__form--label"
+                                                                for="input1">First
+                                                                Name
+                                                                <span
+                                                                    class="contact__form--label__star">*</span></label>
+                                                            <input
+                                                                class="contact__form--input"
+                                                                name="fname"
+                                                                id="fname"
+                                                                placeholder="Your First Name"
+                                                                type="text"
+                                                                required />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-lg-6 col-md-6">
+                                                        <div
+                                                            class="contact__form--list mb-20">
+                                                            <label
+                                                                class="contact__form--label"
+                                                                for="input2">Last
+                                                                Name
+                                                                <span
+                                                                    class="contact__form--label__star">*</span></label>
+                                                            <input
+                                                                class="contact__form--input"
+                                                                name="lname"
+                                                                id="lname"
+                                                                placeholder="Your Last Name"
+                                                                type="text"
+                                                                required />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-lg-6 col-md-6">
+                                                        <div
+                                                            class="contact__form--list mb-20">
+                                                            <label
+                                                                class="contact__form--label"
+                                                                for="input3">Phone
+                                                                Number
+                                                                <span
+                                                                    class="contact__form--label__star">*</span></label>
+                                                            <input
+                                                                class="contact__form--input"
+                                                                name="mobile"
+                                                                id="number"
+                                                                placeholder="Phone number"
+                                                                type="tel"
+                                                                required />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-lg-6 col-md-6">
+                                                        <div
+                                                            class="contact__form--list mb-20">
+                                                            <label
+                                                                class="contact__form--label"
+                                                                for="input4">Email
+                                                                <span
+                                                                    class="contact__form--label__star">*</span></label>
+                                                            <input
+                                                                class="contact__form--input"
+                                                                name="email"
+                                                                id="email"
+                                                                placeholder="Email"
+                                                                type="email"
+                                                                required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div
+                                                            class="contact__form--list mb-10">
+                                                            <label
+                                                                class="contact__form--label"
+                                                                for="input5">Write
+                                                                Your Message
+                                                                <span
+                                                                    class="contact__form--label__star">*</span></label>
+                                                            <textarea
+                                                                class="contact__form--textarea"
+                                                                name="msg"
+                                                                id="msg"
+                                                                placeholder="Write Your Message"
+                                                                required></textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                              </div>
-                                              <div class="col-lg-6 col-md-6">
-                                                <div class="contact__form--list mb-20">
-                                                  <label class="contact__form--label" for="input2">Last Name
-                                                    <span class="contact__form--label__star">*</span></label>
-                                                  <input class="contact__form--input" name="lname" id="lname" placeholder="Your Last Name" type="text"  required/>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-6 col-md-6">
-                                                <div class="contact__form--list mb-20">
-                                                  <label class="contact__form--label" for="input3">Phone Number
-                                                    <span class="contact__form--label__star">*</span></label>
-                                                  <input class="contact__form--input" name="mobile" id="number" placeholder="Phone number" type="tel" required />
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-6 col-md-6">
-                                                <div class="contact__form--list mb-20">
-                                                  <label class="contact__form--label" for="input4">Email
-                                                    <span class="contact__form--label__star">*</span></label>
-                                                  <input class="contact__form--input" name="email" id="email" placeholder="Email" type="email" required />
-                                                </div>
-                                              </div>
-                                              <div class="col-12">
-                                                <div class="contact__form--list mb-10">
-                                                  <label class="contact__form--label" for="input5">Write Your Message
-                                                    <span class="contact__form--label__star">*</span></label>
-                                                  <textarea class="contact__form--textarea" name="msg" id="msg" placeholder="Write Your Message" required></textarea>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <button class="contact__form--btn primary__btn" type="submit" id="submit" name="submit">
-                                              Submit Now
-                                            </button>
-                                          </form>
-                        
-                                      
+                                                <button
+                                                    class="contact__form--btn primary__btn"
+                                                    type="submit" id="submit"
+                                                    name="submit">
+                                                    Submit Now
+                                                </button>
+                                            </form>
+
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Quickview Wrapper End -->
